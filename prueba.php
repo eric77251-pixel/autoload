@@ -1,7 +1,5 @@
 <?php 
 
-require ("app/User.php");
-require("database/Model/ProductModel.php");
 require "vendor/autoload.php";
 
 use App\User;
