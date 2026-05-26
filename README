@@ -1,1 +1,54 @@
 README
+
+Guia de Instalacion:
+1-Requisitos
+PHP 8 o superior
+Composer instalado en el sistema
+
+2-Pasos
+Clonar el Repositorio
+Instalar dependencias (composer install)
+Verificar la autocarga del archivo vendor/
+
+Estructura de Archivos
+autoload2 (Proyecto)/
+│
+├── app/
+│   └── User.php
+│
+├── database/
+│   └── Model/
+│       └── ProductModel.php
+│
+├── vendor/
+│   └── autoload.php
+│
+├── composer.json
+
+
+Conclusiones Tecnicas
+
+1-Mantenibilidad
+La implementación de PSR-4 mejora significativamente la mantenibilidad del 
+proyecto, ya que permite agregar nuevas clases sin modificar archivos globales
+de configuración ni agregar múltiples require.
+Esto facilita:
+-Escalabilidad.
+-Organización del código.
+-Reducción de errores humanos.
+
+2-Lazy Loading
+Composer utiliza carga bajo demanda (Lazy Loading), lo que significa que las clases solo
+se cargan cuando realmente son necesarias.
+Ventajas:
+-Menor consumo de memoria.
+-Mejor rendimiento del servidor.
+-Menor tiempo de carga inicial.
+
+3-Estandarización mediante PSR-4
+El estándar PSR-4 proporciona una estructura organizada y profesional para proyectos PHP.
+Beneficios:
+-Facilita el trabajo colaborativo.
+-Hace el código más entendible.
+-Permite integrar librerías externas fácilmente.
+-Mantiene compatibilidad con frameworks modernos como Laravel o Symfony.
